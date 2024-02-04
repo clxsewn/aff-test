@@ -1,0 +1,727 @@
+:root {
+    --h1-font-size: 90px;
+    --h2-font-size: 45px;
+    --h3-font-size: 30px;
+    --h4-font-size: 25px;
+
+    --text-max-width: 800px;
+
+    --review-inner-mb: 24px;
+    --review-photo-width: 160px;
+    --review-photo-border-radius: 50%;
+
+    --color-green: #418043;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+*::selection {
+    color: #fff;
+    background-color: #418043;
+}
+
+body {
+    line-height: 1.65;
+    color: #0a2117;
+}
+
+h1 {
+    line-height: 1.2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Staatliches', sans-serif;
+    font-weight: 400;
+}
+
+h1 { font-size: var(--h1-font-size); }
+h2 { font-size: var(--h2-font-size); }
+h3 { font-size: var(--h3-font-size); }
+h4 { font-size: var(--h4-font-size) }
+h5 { font-size: 20px; }
+
+.container {
+    width: min(100%, 90vw);
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    gap: 30px;
+}
+
+.row > * {
+    width: 100%;
+}
+
+.no-gap {
+    gap: 0 !important;
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.btn {
+    width: max-content;
+    padding: 16px 35px;
+    display: block;
+    color: #fff;
+    background-color: var(--color-green);
+    text-decoration: none;
+    word-break: break-word;
+    transition: background-color .15s;
+}
+
+.btn:hover {
+    background-color: #55a630;
+    cursor: pointer;
+}
+
+.default-mb { margin-bottom: 50px; }
+.large-mb { margin-bottom: 100px; }
+
+.bg {
+    background-color: #f2f7f6;
+}
+
+.section-title, .section-description {
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 15px;
+}
+
+.section-description {
+    max-width: var(--text-max-width);
+    margin: 0 auto 50px auto;
+}
+
+header {
+    height: 110px;
+    position: relative;
+}
+
+.logo-wrapper {
+    height: 100%;
+}
+
+.logo-container {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 80px;
+    aspect-ratio: 9 / 5;
+}
+
+main {
+    border-bottom: 200px solid #000;
+}
+
+/*
+*   ENTRY SECTION
+*/
+
+#entry {
+    padding: 300px 24px;
+    background-image: url("images/entry-bg.jpg");
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+
+#entry::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.entry-container {
+    width: 44.1%;
+    position: relative;
+    color: #fff;
+    z-index: 3;
+}
+
+.entry__heading {
+    margin-bottom: 30px;
+}
+
+.entry__text {
+    margin-bottom: 45px;
+    color: #d2cdcc;
+}
+
+.entry__btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-size: 23px;
+}
+
+/*
+*   ADVANTAGES SECTION
+*/
+
+#advantages {
+    margin-top: -100px;
+}
+
+.advantages-item {
+    padding: 85px 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    position: relative;
+    z-index: 4;
+
+    text-align: center;
+}
+
+.advantages-item:nth-child(odd) {
+    background-color: #181818;
+}
+
+.advantages-item:nth-child(even) {
+    background-color: #0c0d0c;
+}
+
+.advantages-item__icon {
+    width: 80px;
+    height: 80px;
+}
+
+.advantages-item__icon svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.advantages-item__icon svg path {
+    fill: #fff;
+}
+
+.advantages-item__heading {
+    color: #fcb900;
+    text-transform: uppercase;
+    line-height: 1.2em;
+}
+
+.advantages-item__description {
+    color: #cacaca;
+    font-weight: 500;
+}
+
+/*
+*   PRODUCT
+*/
+
+.product {
+    padding: 75px 65px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.product__img {
+    max-width: 100%;
+}
+
+.product__name {
+    margin-bottom: 24px;
+}
+
+.product__info {
+    margin-bottom: 30px;
+}
+
+/*
+*   HISTORY SECTION
+*/
+
+#history {
+    padding: 100px 24px;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+
+    background-color: #000;
+    background-image: url(https://thestaub.com/wp-content/uploads/2022/07/vegetables-background.svg) !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+#history:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.history-container {
+    position: relative;
+    z-index: 3;
+}
+
+#play-video {
+    margin-bottom: 55px;
+    position: relative;
+}
+
+#play-video:hover {
+    cursor: pointer !important;
+}
+
+#play-video .play-btn {
+    width: 85px;
+    height: 85px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    background-color: #2e6847;
+}
+
+#play-video .play-btn svg {
+    width: 100%;
+    height: 100%;
+}
+
+#play-video img {
+    max-width: 100%;
+}
+
+#history__heading {
+    margin-bottom: 20px;
+}
+
+.history__text {
+    max-width: var(--text-max-width);
+    margin: 0 auto 55px auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+/*
+*   OCCASION SECTION
+*/
+
+.occasion {
+    position: relative;
+    height: 630px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    overflow: hidden;
+}
+
+.occasion::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #001100;
+    opacity: 0;
+
+    transition: opacity .35s;
+}
+
+.occasion:hover::before {
+    opacity: .3;
+}
+
+.occasion__fit-image {
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.occasion__container {
+    padding: 50px;
+
+    position: relative;
+    z-index: 4;
+
+    background-color: #fff;
+    text-align: center;
+}
+
+/*
+*   REVIEWS SECTION
+*/
+
+.review {
+    padding: 60px;
+}
+
+.review__content {
+    position: relative;
+}
+
+.review__quotes {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.review__quotes path {
+    fill: #E6F0EE !important;
+}
+
+.review__photo {
+    width: var(--review-photo-width);
+    height: 160px;
+    margin: 0 auto var(--review-inner-mb) auto;
+
+    display: flex;
+    justify-content: center;
+
+    border-radius: var(--review-photo-border-radius);
+    overflow: hidden;
+}
+
+.review__photo img {
+    height: 100%;
+}
+
+.review__name {
+    text-align: center;
+    margin-bottom: var(--review-inner-mb);
+}
+
+.review__body, .review__aspect {
+    margin-bottom: var(--review-inner-mb);
+    color: #1e1e1e;
+}
+
+.review__author {
+    text-align: center;
+}
+
+.author__about {
+    opacity: .6;
+}
+
+/*
+*   SUBSCRIPTION SECTION
+*/
+
+#subscription {
+    padding: 100px;
+    margin-bottom: -150px;
+    color: #fff;
+    text-align: center;
+
+    background-image: url("https://thestaub.com/wp-content/uploads/2023/12/staub-cast-iron-5-qt-tall-cocotte-tout-2c4bf57a6eed40c88fea51e3ebe162d6.jpg");
+    background-position: 50%;
+    background-size: cover;
+
+    position: relative;
+    z-index: 1;
+}
+
+#subscription::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+}
+
+.subscription__content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    position: relative;
+    z-index: 3;
+}
+
+.subscription__form {
+    width: fit-content;
+    padding: 15px 15px 15px 30px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+
+    background-color: #fff;
+}
+
+.subscription__form input[type="email"] {
+    width: 335px;
+    max-width: 100%;
+    height: 58px;
+    margin-right: 20px;
+    box-sizing: content-box;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid #e6f0ee;
+
+    font-size: 16px;
+    transition: border-bottom .15s;
+}
+
+.subscription__form input[type="email"]:focus {
+    outline: none;
+    border-bottom: 2px solid var(--color-green);
+}
+
+.subscription__form button[type="submit"] {
+    height: 60px;
+    border: none;
+}
+
+/*
+*   FOOTER
+*/
+
+footer {
+    color: #fff;
+
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://thestaub.com/wp-content/uploads/2022/07/footer-vegetables-background.svg);
+}
+
+footer .row {
+    gap: 83px;
+}
+
+.footer-container {
+    padding: 150px 0;
+}
+
+.footer__logo img {
+    max-width: 181px;
+}
+
+.footer__participation {
+    margin-top: 5px;
+    color: #aaa;
+    font-size: 75%;
+    line-height: 2.2;
+}
+
+.footer__heading {
+    margin-bottom: 18px;
+}
+
+.footer__phone {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__hours {
+    margin-bottom: 24px;
+}
+
+.footer__apps {
+    display: flex;
+    gap: 24px;
+}
+
+.footer__app {
+    width: 100%;
+}
+
+.footer__bottom {
+    padding: 50px 0;
+}
+
+.footer__copyright {
+    text-align: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, .6);
+}
+
+/*
+*   VIDEO BG
+*/
+
+#video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+/*#bg-x {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    background-color: red;*/
+/*}*/
+
+#player-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: calc(100vw - 30px);
+    max-height: calc(100vh - 30px);
+    width: min(calc(100vw / 16 * 13), calc(100vh / 9 * 16));
+    aspect-ratio: 16 / 9;
+}
+
+@media screen and (max-width: 1023px) {
+    :root {
+        --h1-font-size: 50px;
+        --h2-font-size: 35px;
+
+        --review-photo-width: 80px;
+        --review-photo-border-radius: 40px;
+    }
+
+    .large-mb {
+        margin-bottom: 70px;
+    }
+
+    #entry {
+        padding: 200px 24px;
+    }
+
+    .entry-container {
+        width: 60%;
+    }
+
+    .advantages-item {
+        padding: 60px 35px;
+    }
+
+    .product {
+        padding: 60px 35px;
+    }
+
+    .review {
+        padding: 50px 35px;
+    }
+
+    #subscription {
+        padding: 70px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        height: 70px;
+        position: sticky;
+        background-color: #fff;
+        top: 0;
+        z-index: 10;
+    }
+
+    .logo {
+        height: 35px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .footer-container {
+        padding: 50px 0;
+    }
+
+    .footer__bottom {
+        padding: 25px 0;
+    }
+
+    footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__contacts {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .entry-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .entry__btn {
+        margin: 0 auto;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    #subscription {
+        padding: 70px 35px 35px 35px;
+    }
+
+    .footer__apps {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .subscription__form {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form__input {
+        text-align: center;
+        width: 100% !important;
+    }
+
+    .form__submit {
+        width: 100% !important;
+    }
+}
