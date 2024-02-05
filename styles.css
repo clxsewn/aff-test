@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'Noto Sans';
+    src: url("fonts/NotoSans-Regular.woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url("fonts/NotoSans-Medium.woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Staatliches';
+    src: url("fonts/Staatliches-Regular.woff");
+    font-weight: 400;
+}
+
 :root {
     --h1-font-size: 90px;
     --h2-font-size: 45px;
@@ -119,14 +137,14 @@ header {
 
 .logo-container {
     height: 100%;
+    width: fit-content;
 
     display: flex;
     align-items: center;
 }
 
 .logo {
-    height: 80px;
-    aspect-ratio: 9 / 5;
+    aspect-ratio: 9 / 5 !important;
 }
 
 main {
@@ -139,7 +157,7 @@ main {
 
 #entry {
     padding: 300px 24px;
-    background-image: url("images/entry-bg.jpg");
+    background-image: url("images/entry-bg.webp");
     background-position: 50%;
     background-size: cover;
     position: relative;
@@ -170,6 +188,7 @@ main {
 .entry__text {
     margin-bottom: 45px;
     color: #d2cdcc;
+    font-weight: 500;
 }
 
 .entry__btn {
@@ -271,7 +290,7 @@ main {
     color: #fff;
 
     background-color: #000;
-    background-image: url(https://thestaub.com/wp-content/uploads/2022/07/vegetables-background.svg) !important;
+    background-image: url("images/vegetables-bg.svg") !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
@@ -404,6 +423,7 @@ main {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
 }
 
 .review__quotes path {
@@ -417,6 +437,9 @@ main {
 
     display: flex;
     justify-content: center;
+
+    position: relative;
+    z-index: 2;
 
     border-radius: var(--review-photo-border-radius);
     overflow: hidden;
@@ -454,7 +477,7 @@ main {
     color: #fff;
     text-align: center;
 
-    background-image: url("https://thestaub.com/wp-content/uploads/2023/12/staub-cast-iron-5-qt-tall-cocotte-tout-2c4bf57a6eed40c88fea51e3ebe162d6.jpg");
+    background-image: url("images/sub.webp");
     background-position: 50%;
     background-size: cover;
 
@@ -492,7 +515,7 @@ main {
     background-color: #fff;
 }
 
-.subscription__form input[type="email"] {
+.form__input {
     width: 335px;
     max-width: 100%;
     height: 58px;
@@ -506,14 +529,16 @@ main {
     transition: border-bottom .15s;
 }
 
-.subscription__form input[type="email"]:focus {
+.form__input:focus {
     outline: none;
     border-bottom: 2px solid var(--color-green);
 }
 
-.subscription__form button[type="submit"] {
+.form__submit {
     height: 60px;
     border: none;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 /*
@@ -527,7 +552,7 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #000000;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://thestaub.com/wp-content/uploads/2022/07/footer-vegetables-background.svg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("images/footer-bg.svg");
 }
 
 footer .row {
@@ -661,6 +686,7 @@ footer .row {
     }
 
     .logo {
+        width: 63px;
         height: 35px;
     }
 
